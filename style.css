@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(226, 226, 226);
+}
+
+header{
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: solid 2px rgb(94, 94, 94);
+    position: fixed;
+}
+header img{
+    width: 40px;
+    height: 40px;
+}
+
+.header__left{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.conteiner{
+    display: flex;
+    padding-top: 100px;
+}
+
+.menu__wrap{
+    width: 220px;
+    height: 400px;
+    padding-left: 30px;
+    position: fixed;
+}
+
+.menu__list{
+    list-style: none;
+    
+}
+
+.menu__link{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 20px;
+    transition: 0.5s;
+}
+.menu__link:hover {
+    background-color: rgba(255, 0, 0, 0.237);
+}
+
+.mails{
+    width: calc(100% - 50px);
+    padding-left: 250px;
+}
+
+.mail__single img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.mail__single{
+    display: flex;
+    padding: 15px 0;
+    border-bottom: solid 2px grey;
+    transition: 0.3s;
+}
+
+.mail__single:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+ .mail__author {
+    display: flex;
+    width: 200px;
+    padding-left: 10px;
+    gap: 15px;
+    align-items: center;
+}
+.mail__content{
+    display: flex;
+    width: calc(100% - 330px);
+    white-space: nowrap;
+   
+    padding-right: 30px;
+}
+.mail__text{
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mail__text::before{
+content: "-";
+color: gray;
+padding: 0 3px;
+}
+
+.mail__date{
+    display: flex;
+    width: 130px;
+    gap: 15px;
+    padding-right: 50px;
+    
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    .mail__single{
+        flex-direction: column;
+        position: relative;
+    }
+    .mail__content{
+        flex-direction: column;
+        padding-left: 45px;
+        width: calc(100% - 30px);
+    }
+    .mail__text::before{
+        content: "";
+        padding: 0;
+    }
+    .mail__date{
+        position: absolute;
+        right: 0;
+        padding-right: 0;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .menu__text{
+        display: none;
+    }
+    .menu__wrap{
+        width: 100px;
+    }
+    .mails{
+        padding-left: 130px;
+    }
+}
